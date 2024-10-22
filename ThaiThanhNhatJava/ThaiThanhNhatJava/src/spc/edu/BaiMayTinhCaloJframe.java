@@ -78,6 +78,11 @@ public class BaiMayTinhCaloJframe extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("X^2");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("R");
@@ -92,12 +97,22 @@ public class BaiMayTinhCaloJframe extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton4.setText("X^Y");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton5.setText("+/-");
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton6.setText("X^3");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton7.setText("N!");
@@ -623,7 +638,7 @@ public class BaiMayTinhCaloJframe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-    double t = Math.exp(Double.parseDouble(jTextField1.getText())); 
+    double t = 1/(Double.parseDouble(jTextField1.getText())); 
     jTextField1.setText("");
     jTextField1.setText(jTextField1.getText() + t); 
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -633,6 +648,24 @@ public class BaiMayTinhCaloJframe extends javax.swing.JFrame {
     jTextField1.setText("");
     jTextField1.setText(jTextField1.getText() + t); 
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       double t = Double.parseDouble(jTextField1.getText());
+       t= t*t;
+       jTextField1.setText("");
+       jTextField1.setText(jTextField1.getText() + t);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        double t = Double.parseDouble(jTextField1.getText());
+       t= t*t*t;
+       jTextField1.setText("");
+       jTextField1.setText(jTextField1.getText() + t);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
